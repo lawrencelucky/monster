@@ -11,6 +11,18 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 5rem 2rem 0rem 15rem;
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 10rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding-left: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 2rem;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -29,7 +41,11 @@ export const LogoImage = styled.img`
   width: 15rem;
 `;
 
-export const Navbar = styled.nav``;
+export const Navbar = styled.nav`
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+`;
 
 export const NavUl = styled.ul`
   display: flex;
@@ -54,15 +70,25 @@ export const RoadmapContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const RoadmapHeader = styled.h2`
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 5rem;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.8rem;
+  }
 `;
 
-export const RoadmapImage = styled.img``;
+export const RoadmapImage = styled.img`
+  width: 100%;
+`;
 
 export const AllocationContainer = styled.div`
   padding: 7rem 0;
@@ -70,25 +96,31 @@ export const AllocationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: ${theme.secondaryBgColor};
+
+  @media screen and (max-width: 600px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const AllocationHeader = styled.h2`
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 5rem;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.8rem;
+  }
 `;
 
-export const AllocationImage = styled.img``;
+export const AllocationImage = styled.img`
+  width: 100%;
+`;
 
 export const FlexWrapContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
   grid-gap: 1rem;
   width: 90%;
-
-  @media screen and (max-width: 600px) {
-    place-items: center;
-  }
 `;
 
 export const AllocatedContainer = styled.div`
@@ -152,12 +184,24 @@ export const Footer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 7rem 0;
+
+  @media screen and (max-width: 600px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const FooterHeader = styled.h2`
   margin-bottom: 5rem;
   font-size: 2.4rem;
   font-weight: 600;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const BinanceLogo = styled.img``;
