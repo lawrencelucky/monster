@@ -43,13 +43,28 @@ export const LogoImage = styled.img`
 
 export const Navbar = styled.nav`
   @media screen and (max-width: 1200px) {
-    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: ${({ open }) => (open ? 0 : '-100%')};
+    background: ${theme.backgroundColor};
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease-out;
   }
 `;
 
 export const NavUl = styled.ul`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const NavListItem = styled.li`
@@ -62,11 +77,57 @@ export const NavListItem = styled.li`
 
   &:not(:last-child) {
     margin-right: 6rem;
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 2rem;
   }
 `;
 
+export const MenuContainer = styled.div``;
 
+export const MenuImage = styled.img`
+  display: none;
 
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    width: 4rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 2.5rem;
+  }
+`;
+
+export const CloseImage = styled.img`
+  display: none;
+
+  @media screen and (max-width: 1200px) {
+    display: ${({ open }) => (open ? 'flex' : 'none')};
+    width: 4rem;
+    position: fixed;
+    top: 6rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 3rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 2.5rem;
+  }
+`;
 
 export const AllocationContainer = styled.div`
   padding: 7rem 0;

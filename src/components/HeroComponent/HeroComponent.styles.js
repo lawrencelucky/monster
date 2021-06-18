@@ -34,7 +34,7 @@ export const ContentContainer = styled.div`
   @media screen and (max-width: 900px) {
     margin-top: 0rem;
     margin-left: 0rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   @media screen and (max-width: 600px) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   LandingPageContainer,
@@ -9,6 +9,8 @@ import {
   Navbar,
   NavUl,
   NavListItem,
+  MenuImage,
+  CloseImage,
   AllocationContainer,
   AllocationHeader,
   AllocationImage,
@@ -30,8 +32,12 @@ import MonsterIcon from './../../assets/monster_logo.png';
 import MonsterTitle from './../../assets/monster_title_logo.png';
 import Allocation from './../../assets/token_allocation_image.png';
 import Binance from './../../assets/binance_logo.png';
+import MenuIcon from './../../assets/menu.svg';
+import CloseIcon from './../../assets/cancel.svg';
 
 const LandingPage = () => {
+  const [openNav, setOpenNav] = useState(false);
+
   return (
     <LandingPageContainer>
       <Header>
@@ -39,7 +45,20 @@ const LandingPage = () => {
           <LogoIcon src={MonsterIcon} alt='' draggable={false} />
           <LogoImage src={MonsterTitle} alt='' draggable={false} />
         </LogoContainer>
-        <Navbar>
+        <MenuImage
+          onClick={() => setOpenNav(true)}
+          src={MenuIcon}
+          alt=''
+          draggable={false}
+        />
+        <CloseImage
+          onClick={() => setOpenNav(false)}
+          src={CloseIcon}
+          alt=''
+          draggable={false}
+          open={openNav}
+        />
+        <Navbar open={openNav}>
           <NavUl>
             <NavListItem>About</NavListItem>
             <NavListItem>MONSTER Ecosystem</NavListItem>
