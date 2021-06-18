@@ -28,6 +28,14 @@ export const Modal = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 6rem;
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const Header = styled.h2`
@@ -35,15 +43,25 @@ export const Header = styled.h2`
   font-weight: 600;
   margin-bottom: 4.5rem;
   margin-top: 3rem;
+  text-align: center;
 
   span {
     color: ${theme.primaryColor};
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.6rem;
   }
 `;
 
 export const Desc = styled.p`
   margin-bottom: 3.5rem;
   font-size: 1.6rem;
+  text-align: center;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -56,6 +74,10 @@ export const Input = styled.input`
   border-radius: 5px;
   color: ${theme.textColor};
   font-size: 1.6rem;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -68,4 +90,8 @@ export const Button = styled.button`
   font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.6rem;
+  }
 `;

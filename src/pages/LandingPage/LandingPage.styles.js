@@ -87,7 +87,9 @@ export const RoadmapHeader = styled.h2`
 `;
 
 export const RoadmapImage = styled.img`
-  width: 100%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const AllocationContainer = styled.div`
@@ -113,7 +115,9 @@ export const AllocationHeader = styled.h2`
 `;
 
 export const AllocationImage = styled.img`
-  width: 100%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const FlexWrapContainer = styled.div`

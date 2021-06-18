@@ -28,6 +28,14 @@ export const Modal = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 6rem;
+
+  @media screen and (max-width: 700px) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const Header = styled.h2`
@@ -35,6 +43,15 @@ export const Header = styled.h2`
   font-weight: 600;
   margin-bottom: 4.5rem;
   margin-top: 3rem;
+
+  @media screen and (max-width: 700px) {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Desc = styled.p`
@@ -44,6 +61,14 @@ export const Desc = styled.p`
 
   span {
     color: ${theme.primaryColor};
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.4rem;
   }
 `;
 
@@ -56,6 +81,16 @@ export const BuyWithContainer = styled.div`
   border-radius: 5px;
   padding: 1rem 2rem;
   margin-bottom: 3rem;
+
+  @media screen and (max-width: 700px) {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const IconTextContainer = styled.div`
@@ -67,6 +102,10 @@ export const IconTextContainer = styled.div`
 export const BUSDIcon = styled.img`
   width: 6rem;
   margin-right: 1rem;
+
+  @media screen and (max-width: 700px) {
+    width: 3rem;
+  }
 `;
 
 export const BuyWithText = styled.p`
@@ -82,6 +121,13 @@ export const InputContainer = styled.div`
   border: 1px solid ${theme.primaryColor};
   border-radius: 5px;
   padding: 1rem 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 700px) {
+    padding: 0.5rem;
+  }
 `;
 
 export const InputLabel = styled.label`
@@ -96,6 +142,7 @@ export const Input = styled.input`
   font-size: 1.8rem;
   color: ${theme.primaryColor};
   font-weight: 600;
+  flex: 1;
 `;
 
 export const ReceiveContainer = styled.div`
@@ -104,11 +151,19 @@ export const ReceiveContainer = styled.div`
   background: ${theme.textColor};
   border-radius: 5px;
   padding: 1rem 2rem;
+
+  @media screen and (max-width: 700px) {
+    padding: 1rem;
+  }
 `;
 
 export const MNSTRIcon = styled.img`
   width: 6rem;
   margin-right: 1rem;
+
+  @media screen and (max-width: 700px) {
+    width: 3rem;
+  }
 `;
 
 export const ReceiveText = styled.p`
@@ -147,11 +202,16 @@ export const Button = styled.button`
   span {
     font-weight: 600;
   }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const PurchaseWarning = styled.p`
   font-size: 1.4rem;
   color: ${theme.secondaryColor};
+  text-align: center;
 
   span {
     color: ${theme.primaryColor};
@@ -163,6 +223,10 @@ export const TransactionDetailContainer = styled.div`
   padding: 2rem;
   border-radius: 5px;
   margin-top: 2rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+  }
 `;
 
 export const TransactionDetail = styled.div`
@@ -172,6 +236,11 @@ export const TransactionDetail = styled.div`
 
   &:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
