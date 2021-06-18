@@ -9,9 +9,6 @@ import {
   Navbar,
   NavUl,
   NavListItem,
-  RoadmapContainer,
-  RoadmapHeader,
-  RoadmapImage,
   AllocationContainer,
   AllocationHeader,
   AllocationImage,
@@ -27,10 +24,10 @@ import {
 
 import HeroComponent from '../../components/HeroComponent/HeroComponent.comp';
 import AboutMonster from './../../components/AboutMonsterComponent/AboutMonster.comp';
+import Roadmap from './../../components/RoadmapComponent/Roadmap.comp';
 
 import MonsterIcon from './../../assets/monster_logo.png';
 import MonsterTitle from './../../assets/monster_title_logo.png';
-import Roadmap from './../../assets/monster_roadmap.png';
 import Allocation from './../../assets/token_allocation_image.png';
 import Binance from './../../assets/binance_logo.png';
 
@@ -55,11 +52,7 @@ const LandingPage = () => {
 
       <HeroComponent />
       <AboutMonster />
-
-      <RoadmapContainer>
-        <RoadmapHeader>Roadmap</RoadmapHeader>
-        <RoadmapImage src={Roadmap} alt='' draggable={false} />
-      </RoadmapContainer>
+      <Roadmap />
 
       <AllocationContainer>
         <AllocationHeader>Token Allocation</AllocationHeader>

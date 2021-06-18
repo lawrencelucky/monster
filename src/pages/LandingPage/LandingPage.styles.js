@@ -65,32 +65,8 @@ export const NavListItem = styled.li`
   }
 `;
 
-export const RoadmapContainer = styled.div`
-  padding: 7rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  @media screen and (max-width: 600px) {
-    padding: 4rem 0;
-  }
-`;
 
-export const RoadmapHeader = styled.h2`
-  font-size: 2.4rem;
-  font-weight: 600;
-  margin-bottom: 5rem;
-
-  @media screen and (max-width: 400px) {
-    font-size: 1.8rem;
-  }
-`;
-
-export const RoadmapImage = styled.img`
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-`;
 
 export const AllocationContainer = styled.div`
   padding: 7rem 0;
