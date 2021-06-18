@@ -10,6 +10,15 @@ export const PreSalePageContainer = styled(Container)`
 export const Header = styled.div`
   display: flex;
   padding: 5rem 0 0 15rem;
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 10rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding-left: 2rem;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -34,16 +43,40 @@ export const PreSaleHeader = styled.div`
   justify-content: space-between;
   padding: 0 15rem;
   margin-top: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 10rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 0 2rem;
+  }
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const JoinPreSaleContainer = styled.div`
   background: ${theme.primaryColor};
   padding: 2px 1.8rem;
+
+  @media screen and (max-width: 700px) {
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 2px;
+  }
 `;
 
-export const JoinPreSaleText = styled.div`
+export const JoinPreSaleText = styled.p`
   font-weight: 500;
   font-size: 1.8rem;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -55,13 +88,26 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 500;
   font-size: 1.8rem;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.6rem;
+  }
+`;
+
+export const CenterDiv = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const Card = styled.div`
   display: flex;
-  padding: 0 13rem;
   margin-top: 4rem;
   height: 44.9rem;
+  padding: 1rem;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 export const CardLeft = styled.div`
@@ -69,6 +115,17 @@ export const CardLeft = styled.div`
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 70rem;
+  padding-bottom: 3rem;
+
+  @media screen and (max-width: 1024px) {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 export const CardLeftHeader = styled.div`
@@ -78,6 +135,10 @@ export const CardLeftHeader = styled.div`
   margin: 4rem 3rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid ${theme.primaryColor};
+
+  @media screen and (max-width: 600px) {
+    margin: 2rem 1rem;
+  }
 `;
 
 export const IconTokenContainer = styled.div`
@@ -113,9 +174,24 @@ export const TrackTokenContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 4rem;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
-export const HeadingDescContainer = styled.div``;
+export const HeadingDescContainer = styled.div`
+  @media screen and (max-width: 500px) {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+`;
 
 export const TrackHeading = styled.h2`
   font-size: 1.8rem;
@@ -134,6 +210,12 @@ export const Progress = styled.div`
   background: ${theme.textColor};
   margin: 0 auto;
   margin-top: 4rem;
+
+  @media screen and (max-width: 600px) {
+    width: 95%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 export const TransactionTokenContainer = styled.div`
@@ -144,6 +226,16 @@ export const TransactionTokenContainer = styled.div`
   padding-top: 5rem;
   margin-top: 5rem;
   border-top: 1px solid ${theme.textColor};
+
+  @media screen and (max-width: 600px) {
+    margin: 0 1rem;
+    margin-top: 5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const TransactionHeading = styled.h2`
@@ -168,14 +260,39 @@ export const CardRight = styled.div`
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 4rem 6rem;
+
+  @media screen and (max-width: 1100px) {
+    width: 70rem;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 2rem 1rem;
+  }
 `;
 
-export const CardRightHeading = styled.h2``;
+export const CardRightHeading = styled.h2`
+  font-size: 2.4rem;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.8rem;
+  }
+`;
 
 export const CardRightDescription = styled.p`
   width: 35rem;
   font-size: 1.5rem;
   margin-top: 1.5rem;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 
 export const WhiteListContainer = styled.div`
@@ -202,7 +319,7 @@ export const Text = styled.p`
 
 export const CardRightButton = styled.button`
   font-weight: 500;
-  padding: 1.5rem 10rem;
+  padding: 1.5rem;
   border: 1px solid ${theme.textColor};
   background: transparent;
   border-radius: 5px;
