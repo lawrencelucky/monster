@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { theme } from './../../globalStyles';
 
 export const HeroSectionContainer = styled.div`
-  height: 60vh;
+  height: 41.8rem;
   display: flex;
   justify-content: space-between;
   border-bottom: 9px solid ${theme.primaryColor};
@@ -16,10 +16,13 @@ export const ContentContainer = styled.div`
   margin-left: 20rem;
 `;
 
-export const Heading = styled.h2``;
+export const Heading = styled.h2`
+  margin-bottom: 1rem;
+`;
 
 export const Description = styled.p`
   margin-bottom: 5rem;
+  line-height: 2.5rem;
 `;
 
 export const Button = styled(Link)`
@@ -33,6 +36,7 @@ export const Button = styled(Link)`
   border: 0;
   cursor: pointer;
   text-decoration: none;
+  white-space: nowrap;
 `;
 
 export const ImageContainer = styled.div``;

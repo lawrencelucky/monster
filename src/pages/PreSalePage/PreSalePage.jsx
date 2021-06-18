@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   PreSalePageContainer,
@@ -38,12 +38,18 @@ import {
   WarningText,
 } from './PreSalePage.styles';
 
+import AirdropModal from './../../components/AirdropModalComponent/AirdropModal.comp';
+import TransactionModal from '../../components/TransactionModalComponent/TransactionModal.comp';
+
 import MonsterIcon from './../../assets/monster_logo.png';
 import MonsterTitle from './../../assets/monster_title_logo.png';
 import PaperIcon from './../../assets/paper_icon.svg';
 import WarnIcon from './../../assets/warn_icon.svg';
 
 const PreSalePage = () => {
+  const [openAirdropModal, setOpenAirdropModal] = useState(false);
+  const [openTransModal, setOpenTransModal] = useState(false);
+
   return (
     <PreSalePageContainer>
       <Header>
@@ -57,8 +63,13 @@ const PreSalePage = () => {
         <JoinPreSaleContainer>
           <JoinPreSaleText>Join the MONSTERFinance Pre Sale</JoinPreSaleText>
         </JoinPreSaleContainer>
-        <Button>Claim Airdrop</Button>
+        <Button onClick={() => setOpenAirdropModal(true)}>Claim Airdrop</Button>
       </PreSaleHeader>
+
+      <AirdropModal
+        openModal={openAirdropModal}
+        setOpenModal={setOpenAirdropModal}
+      />
 
       <Card>
         <CardLeft>
@@ -111,7 +122,9 @@ const PreSalePage = () => {
             <WhiteListText>Whitepaper</WhiteListText>
           </WhiteListContainer>
           <Text>Join Pool</Text>
-          <CardRightButton>Connect Wallet</CardRightButton>
+          <CardRightButton onClick={() => setOpenTransModal(true)}>
+            Connect Wallet
+          </CardRightButton>
           <WarningContainer>
             <WarningIcon src={WarnIcon} alt='' draggable={false} />
             <WarningText>
@@ -121,6 +134,11 @@ const PreSalePage = () => {
           </WarningContainer>
         </CardRight>
       </Card>
+
+      <TransactionModal
+        openModal={openTransModal}
+        setOpenModal={setOpenTransModal}
+      />
     </PreSalePageContainer>
   );
 };

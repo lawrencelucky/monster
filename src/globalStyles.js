@@ -30,7 +30,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   letter-spacing: 1px;
-  line-height: 1.3;
+  line-height: 16px;
   font-weight: 300;
   background-color: ${theme.backgroundColor};
   color: ${theme.textColor};
