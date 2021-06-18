@@ -5,7 +5,6 @@ import {
   Modal,
   Header,
   Desc,
-  TransactionContainer,
   BuyWithContainer,
   IconTextContainer,
   BUSDIcon,
@@ -42,60 +41,58 @@ const TransactionModal = ({ openModal, setOpenModal }) => {
           minimum of <span>400 BUSD</span>
         </Desc>
 
-        <TransactionContainer>
-          <BuyWithContainer>
-            <IconTextContainer>
-              <BUSDIcon src={BinanceIcon} alt='' draggable={false} />
-              <BuyWithText>
-                Buy with: <br /> <span>BUSD</span>
-              </BuyWithText>
-            </IconTextContainer>
-            <InputContainer>
-              <InputLabel>MAX</InputLabel>
-              <Input value='0.0000' />
-            </InputContainer>
-          </BuyWithContainer>
+        <BuyWithContainer>
+          <IconTextContainer>
+            <BUSDIcon src={BinanceIcon} alt='' draggable={false} />
+            <BuyWithText>
+              Buy with: <br /> <span>BUSD</span>
+            </BuyWithText>
+          </IconTextContainer>
+          <InputContainer>
+            <InputLabel>MAX</InputLabel>
+            <Input value='0.0000' />
+          </InputContainer>
+        </BuyWithContainer>
 
-          <ReceiveContainer>
-            <IconTextContainer>
-              <MNSTRIcon src={MonsterIcon} alt='' draggable={false} />
-              <ReceiveText>
-                Receive: <br /> <span>MNSTR</span>
-              </ReceiveText>
-            </IconTextContainer>
-            <ReceiveAmountContainer>
-              <ReceievedAmount>0.0000</ReceievedAmount>
-            </ReceiveAmountContainer>
-          </ReceiveContainer>
+        <ReceiveContainer>
+          <IconTextContainer>
+            <MNSTRIcon src={MonsterIcon} alt='' draggable={false} />
+            <ReceiveText>
+              Receive: <br /> <span>MNSTR</span>
+            </ReceiveText>
+          </IconTextContainer>
+          <ReceiveAmountContainer>
+            <ReceievedAmount>0.0000</ReceievedAmount>
+          </ReceiveAmountContainer>
+        </ReceiveContainer>
 
-          <Button>
-            Buy <span>MNSTR</span>
-          </Button>
+        <Button>
+          Buy <span>MNSTR</span>
+        </Button>
 
-          <PurchaseWarning>
-            BUSD amount too small. Minimum purchase is XXX <span>MNSTR</span>
-          </PurchaseWarning>
+        <PurchaseWarning>
+          BUSD amount too small. Minimum purchase is XXX <span>MNSTR</span>
+        </PurchaseWarning>
 
-          <TransactionDetailContainer>
-            <TransactionDetail>
-              <TransactionDetailDesc>
-                Your total contibution:
-              </TransactionDetailDesc>
-              <TransactionDetailValue>0.00 BUSD</TransactionDetailValue>
-            </TransactionDetail>
+        <TransactionDetailContainer>
+          <TransactionDetail>
+            <TransactionDetailDesc>
+              Your total contibution:
+            </TransactionDetailDesc>
+            <TransactionDetailValue>0.00 BUSD</TransactionDetailValue>
+          </TransactionDetail>
 
-            <TransactionDetail>
-              <TransactionDetailDesc>
-                Your total MNSTR purchased:
-              </TransactionDetailDesc>
-              <TransactionDetailValue>0.00 MNSTR</TransactionDetailValue>
-            </TransactionDetail>
-          </TransactionDetailContainer>
+          <TransactionDetail>
+            <TransactionDetailDesc>
+              Your total MNSTR purchased:
+            </TransactionDetailDesc>
+            <TransactionDetailValue>0.00 MNSTR</TransactionDetailValue>
+          </TransactionDetail>
+        </TransactionDetailContainer>
 
-          <TransactionDate>
-            Tokens will be distributed on [insert DateTime]
-          </TransactionDate>
-        </TransactionContainer>
+        <TransactionDate>
+          Tokens will be distributed on [insert DateTime]
+        </TransactionDate>
       </Modal>
     </>
   );

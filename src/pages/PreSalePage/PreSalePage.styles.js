@@ -10,7 +10,6 @@ export const PreSalePageContainer = styled(Container)`
 export const Header = styled.div`
   display: flex;
   padding: 5rem 0 0 15rem;
-  margin-bottom: 4rem;
 
   @media screen and (max-width: 1200px) {
     padding-left: 10rem;
@@ -18,6 +17,10 @@ export const Header = styled.div`
 
   @media screen and (max-width: 1100px) {
     padding-left: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 2rem;
   }
 `;
 
@@ -97,12 +100,11 @@ export const Button = styled.button`
 export const CenterDiv = styled.div`
   display: flex;
   justify-content: center;
+  padding: 3rem 0;
 `;
 
 export const Card = styled.div`
   display: flex;
-  margin-top: 4rem;
-  height: 44.9rem;
   padding: 1rem;
 
   @media screen and (max-width: 1100px) {

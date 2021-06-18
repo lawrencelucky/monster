@@ -43,6 +43,7 @@ export const Header = styled.h2`
   font-weight: 600;
   margin-bottom: 4.5rem;
   margin-top: 3rem;
+  text-align: center;
 
   @media screen and (max-width: 700px) {
     margin-top: 1rem;
@@ -81,6 +82,7 @@ export const BuyWithContainer = styled.div`
   border-radius: 5px;
   padding: 1rem 2rem;
   margin-bottom: 3rem;
+  width: 100%;
 
   @media screen and (max-width: 700px) {
     padding: 1rem;
@@ -142,7 +144,7 @@ export const Input = styled.input`
   font-size: 1.8rem;
   color: ${theme.primaryColor};
   font-weight: 600;
-  flex: 1;
+  width: 100%;
 `;
 
 export const ReceiveContainer = styled.div`
@@ -151,6 +153,7 @@ export const ReceiveContainer = styled.div`
   background: ${theme.textColor};
   border-radius: 5px;
   padding: 1rem 2rem;
+  width: 100%;
 
   @media screen and (max-width: 700px) {
     padding: 1rem;
@@ -223,6 +226,7 @@ export const TransactionDetailContainer = styled.div`
   padding: 2rem;
   border-radius: 5px;
   margin-top: 2rem;
+  width: 100%;
 
   @media screen and (max-width: 500px) {
     padding: 1rem;

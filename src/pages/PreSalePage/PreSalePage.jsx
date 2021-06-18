@@ -72,6 +72,11 @@ const PreSalePage = () => {
         setOpenModal={setOpenAirdropModal}
       />
 
+      <TransactionModal
+        openModal={openTransModal}
+        setOpenModal={setOpenTransModal}
+      />
+
       <CenterDiv>
         <Card>
           <CardLeft>
@@ -137,11 +142,6 @@ const PreSalePage = () => {
           </CardRight>
         </Card>
       </CenterDiv>
-
-      <TransactionModal
-        openModal={openTransModal}
-        setOpenModal={setOpenTransModal}
-      />
     </PreSalePageContainer>
   );
 };
